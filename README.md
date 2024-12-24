@@ -74,19 +74,20 @@ The model was trained using the following parameters:
 
 The model achieved the following performance on the test set:
 
-*   **Accuracy:** \[Insert your test accuracy here]
-*   **Precision:** \[Insert your test precision here]
-*   **Recall:** \[Insert your test recall here]
-*   **F1-Score:** \[Insert your test F1-score here]
-*   **AUC:** \[Insert your test AUC here]
+*   **Accuracy:** 0.9439
+*   **Precision:** 0.9236
+*   **Recall:** 0.9923
+*   **F1-Score:** 0.9567
+*   **AUC:** 0.9894
 
 **Confusion Matrix:**
 
-\[Insert your confusion matrix here if you have it]
+[[202  32]
+ [  3 387]]
 
 **Training and Validation Loss/Accuracy Curves:**
 
-\[Insert plots of your training and validation loss/accuracy curves here]
+![Accuracy Curves](Accuracy_curves.png)
 
 -------
 
@@ -138,12 +139,6 @@ Please use the Notebook located in the `notebook` directory, or use the followin
         python src/evaluate.py
         ```
     *   This will evaluate the trained model on the test set and print the results.
-
--------
-
-## Demo
-
-(Optional) If you have created a demo (e.g., using Streamlit or Gradio), provide a link to it here.
 
 -------
 
