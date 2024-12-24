@@ -30,10 +30,10 @@ def load_dataset(data_dir, batch_size=64, num_workers=2):
 
 # Function to load the trained model
 def load_model(model_path, num_classes):
-    model = models.resnet50(pretrained=False)
+    model = model = models.resnet50(weights=None)
     num_ftrs = model.fc.in_features
     model.fc = torch.nn.Linear(num_ftrs, num_classes)
-    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu'), weights_only=True))
     model.eval()
     return model
 

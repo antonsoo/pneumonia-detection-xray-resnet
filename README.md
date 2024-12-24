@@ -18,16 +18,18 @@ The dataset used in this project is the Chest X-Ray Images (Pneumonia) dataset a
 
 **Dataset Structure:**
 
+```plaintext
 chest-xray/
 ├── train/
-│ ├── NORMAL/
-│ └── PNEUMONIA/
+│   ├── NORMAL/
+│   └── PNEUMONIA/
 ├── val/
-│ ├── NORMAL/
-│ └── PNEUMONIA/
+│   ├── NORMAL/
+│   └── PNEUMONIA/
 └── test/
-├── NORMAL/
-└── PNEUMONIA/
+    ├── NORMAL/
+    └── PNEUMONIA/
+```
 
 **Data Source:** [https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 

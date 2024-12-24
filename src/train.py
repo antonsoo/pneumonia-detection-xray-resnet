@@ -173,16 +173,21 @@ def evaluate_model(model, dataloaders, device, class_names):
 
 # Function to plot training and validation curves
 def plot_training_curves(train_losses, val_losses, train_accuracies, val_accuracies):
+    train_accuracies_cpu = [acc.cpu().item() for acc in train_accuracies]
+    val_accuracies_cpu = [acc.cpu().item() for acc in val_accuracies]
+    train_losses_cpu = [loss for loss in train_losses]
+    val_losses_cpu = [loss for loss in val_losses]
+
     plt.figure(figsize=(10, 5))
     plt.subplot(1, 2, 1)
-    plt.plot(train_losses, label='Training Loss')
-    plt.plot(val_losses, label='Validation Loss')
+    plt.plot(train_losses_cpu, label='Training Loss')
+    plt.plot(val_losses_cpu, label='Validation Loss')
     plt.legend()
     plt.title('Loss')
 
     plt.subplot(1, 2, 2)
-    plt.plot(train_accuracies, label='Training Accuracy')
-    plt.plot(val_accuracies, label='Validation Accuracy')
+    plt.plot(train_accuracies_cpu, label='Training Accuracy')
+    plt.plot(val_accuracies_cpu, label='Validation Accuracy')
     plt.legend()
     plt.title('Accuracy')
     plt.savefig('accuracy_curves.png')
