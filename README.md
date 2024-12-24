@@ -82,12 +82,11 @@ The model achieved the following performance on the test set:
 
 **Confusion Matrix:**
 
-[[202  32]
- [  3 387]]
+![Confusion Matrix](assets/Confusion_Matrix.png)
 
 **Training and Validation Loss/Accuracy Curves:**
 
-![Accuracy Curves](Accuracy_curves.png)
+![Accuracy Curves](assets/Accuracy_curves.png)
 
 -------
 
